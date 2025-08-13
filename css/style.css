@@ -289,3 +289,26 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+/* About Artist Section */
+.about-artist {
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+.about-artist h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #C81D25;
+}
+
+.about-artist p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: #ccc;
+}
