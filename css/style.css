@@ -17,6 +17,52 @@ body {
 /* =========================
    Navbar
 ========================= */
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* Slide-out menu for mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        height: 100%;
+        width: 250px;
+        background-color: #111;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links li a {
+        font-size: 1.5rem;
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in */
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
