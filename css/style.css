@@ -63,6 +63,20 @@ body {
     }
 }
 
+/* Hamburger animation */
+.hamburger.toggle .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
