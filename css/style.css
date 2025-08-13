@@ -305,6 +305,16 @@ footer {
     color: #C81D25;
 }
 
+.artist-card h3 a {
+    color: #C81D25;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.artist-card h3 a:hover {
+    color: #39FF14; /* Neon green on hover */
+}
+
 .about-artist p {
     font-size: 1.1rem;
     max-width: 800px;
