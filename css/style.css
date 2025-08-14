@@ -224,39 +224,52 @@ body {
 ========================= */
 .gallery {
     padding: 60px 20px;
-    background-color: #111;
+    background-color: #1e1e1e;
+    color: #fff;
     text-align: center;
+    overflow: hidden;
 }
 
 .gallery h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
-    margin-bottom: 40px;
     color: #C81D25;
+    margin-bottom: 40px;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.gallery-carousel {
+    display: flex;
     gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.gallery-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-carousel::-webkit-scrollbar-thumb {
+    background-color: #C81D25;
+    border-radius: 5px;
 }
 
 .gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 auto;
 }
 
 .gallery-item img {
-    width: 100%;
-    display: block;
+    width: 250px;       /* fixed width */
+    height: 250px;      /* fixed height to make all images square */
     border-radius: 10px;
-    transition: transform 0.3s;
+    object-fit: cover;  /* crops images to fit without distortion */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery-item:hover img {
+
+.gallery-item img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px #C81D25;
+    box-shadow: 0 0 20px #39FF14;
 }
 
 /* =========================
@@ -321,4 +334,40 @@ footer {
     margin: 15px auto;
     line-height: 1.8;
     color: #ccc;
+}
+
+/* footer section */
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 30px 20px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+footer .footer-content p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #39FF14; /* Neon green phone number */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer p:nth-child(2) {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #C81D25; /* Neon red for "Get TATTOOS" */
+}
+
+footer p:nth-child(3),
+footer p:nth-child(4) {
+    color: #fff; /* Business hours & job openings */
+    font-weight: 500;
 }
