@@ -350,7 +350,7 @@ footer .footer-content p {
 }
 
 footer a {
-    color: #39FF14; /* Neon green phone number */
+    color: #ee0800; /* Neon green phone number */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -370,4 +370,21 @@ footer p:nth-child(3),
 footer p:nth-child(4) {
     color: #fff; /* Business hours & job openings */
     font-weight: 500;
+}
+
+
+
+
+/* Reveasl some user experience */
+/* Initial state */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); /* Start 50px below */
+    transition: all 0.8s ease-out;
+}
+
+/* When in view */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
