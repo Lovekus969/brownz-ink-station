@@ -10,6 +10,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #111111;
+    
     color: #fff;
     line-height: 1.6;
 }
@@ -114,15 +115,41 @@ body {
 /* =========================
    Hero Section
 ========================= */
+/* In your animations.css */
 .hero {
-    height: 100vh;
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: #000; /* dark background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.smoke {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  animation: smokeMove 20s linear infinite;
+  filter: blur(60px);
+}
+
+.smoke:nth-child(2) {
+  animation-duration: 25s;
+  left: -30%;
+  top: -40%;
+}
+
+@keyframes smokeMove {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(20%, -10%) scale(1.2); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
 
 .hero::after {
     content: "";
@@ -148,6 +175,7 @@ body {
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    color: #bc42425f;
 }
 
 .cta-button {
