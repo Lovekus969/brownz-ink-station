@@ -1,0 +1,72 @@
+/* ================== Owner Manual Page Styling ================== */
+body.owner-page {
+    background: #0e0e0e;
+    color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.owner-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 150, 0.3);
+}
+
+.owner-section h2 {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #ff0099;
+    text-shadow: 0 0 10px #010001, 0 0 20px #ff00cc;
+}
+
+table.owner-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.owner-table th, .owner-table td {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.owner-table th {
+    background: #ff0099;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.owner-table td {
+    background: #1e1e1e;
+    color: #ccc;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.owner-table td:hover {
+    background: #ff0099;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff0099, 0 0 20px #ff00cc;
+}
+
+.owner-table tr:nth-child(even) td {
+    background: #272727;
+}
+
+footer.owner-footer {
+    text-align: center;
+    margin: 50px 0 20px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+footer.owner-footer p {
+    margin: 5px 0;
+}
