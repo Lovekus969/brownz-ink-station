@@ -13,7 +13,7 @@ Brownz Ink Station now features a **dynamic booking page** where clients can:
 
 ### Owner Manual Access
 - Hidden **owner manual page** for managing bookings
-- Accessible with keyboard shortcut: **Alt + Ctrl + O**
+- Accessible with keyboard shortcut: **Alt + Ctrl + B
 - Contains booking overview, contact info, and operational notes
 
 ### Future Improvements
