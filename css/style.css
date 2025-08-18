@@ -162,7 +162,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: #000000;
 }
 
 .hero h1 {
@@ -182,15 +182,16 @@ body {
     text-decoration: none;
     padding: 15px 40px;
     background-color: #C81D25;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #39FF14; /* Neon green on hover */
-    color: #111;
+    background-color: #a34b4b79; /* Neon green on hover */
+    color: #ffffff;
+    transition: 2000ms;
 }
 
 /* =========================
@@ -217,7 +218,7 @@ body {
 }
 
 .artist-card {
-    background-color: #222;
+    background-color: #000000;
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -238,14 +239,10 @@ body {
 }
 
 .artist-card h3 {
-    color: #fff;
+    color: #221d1d;
     margin-bottom: 5px;
 }
 
-.artist-card p {
-    color: #aaa;
-    font-size: 0.9rem;
-}
 
 /* =========================
    Gallery Section
@@ -352,16 +349,71 @@ footer {
     transition: color 0.3s;
 }
 
-.artist-card h3 a:hover {
-    color: #39FF14; /* Neon green on hover */
+.artist-card h3 a {
+    color: #9a3c3c80;
+    transition: all 0.3s ease;
+    display: inline-block; /* ensures transform works correctly */
 }
+
+.artist-card h3 a:hover {
+    animation: blinkGrow 1s infinite;
+}
+
+@keyframes blinkGrow {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        color: #ffffff;
+    }
+    25% {
+        opacity: 0.5;
+        transform: scale(1.1);
+        color: #ff0000; /* optional color change */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+        color: #ffff00; /* optional color change */
+    }
+    75% {
+        opacity: 0.5;
+        transform: scale(1.1);
+        color: #ff00ff; /* optional color change */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        color: #ffffff;
+    }
+}
+
 
 .about-artist p {
     font-size: 1.1rem;
     max-width: 800px;
     margin: 15px auto;
     line-height: 1.8;
-    color: #ccc;
+    color: #494949;
+    transition: all 0.3s ease;
+}
+
+.about-artist p:hover {
+    animation: pulseText 1.2s infinite;
+}
+
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+        color: #ccc;
+    }
+    50% {
+        transform: scale(1.05);
+        color: #fff;
+    }
+    100% {
+        transform: scale(1);
+        color: #ccc;
+    }
 }
 
 
