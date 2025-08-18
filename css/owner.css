@@ -5,61 +5,90 @@ body.owner-page {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Section Container */
 .owner-section {
     max-width: 1200px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 25px 20px;
     background: #1a1a1a;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 150, 0.3);
+    box-shadow: 0 0 25px rgba(255, 0, 150, 0.3);
 }
 
+/* Heading */
 .owner-section h2 {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
     font-size: 3rem;
     margin-bottom: 30px;
     color: #ff0099;
-    text-shadow: 0 0 10px #010001, 0 0 20px #ff00cc;
+    text-shadow: 0 0 10px #000000, 0 0 20px #ff00cc;
 }
 
-table.owner-table {
+/* Table Styling */
+.owner-table {
     width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 10px;
+    border-collapse: separate;       /* allow spacing between rows */
+    border-spacing: 0 10px;          /* vertical space between rows */
+    table-layout: fixed;              /* consistent column widths */
+    font-size: 0.95rem;
 }
 
 .owner-table th, .owner-table td {
-    padding: 15px 20px;
+    padding: 15px 20px;              /* space inside cells */
     text-align: center;
-}
-
-.owner-table th {
-    background: #ff0099;
-    color: #fff;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.owner-table td {
-    background: #1e1e1e;
-    color: #ccc;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 220px;                 /* prevent excessive width */
+    border-radius: 10px;              /* rounded cells */
     transition: transform 0.3s, background 0.3s, color 0.3s;
 }
 
-.owner-table td:hover {
+/* Table Header */
+.owner-table th {
     background: #ff0099;
     color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #ff0099, 0 0 20px #ff00cc;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
+/* Table Body Cells */
+.owner-table td {
+    background: #1e1e1e;
+    color: #ccc;
+}
+
+/* Alternate Row Color */
 .owner-table tr:nth-child(even) td {
     background: #272727;
 }
 
+/* Hover Effect on Cells */
+.owner-table td:hover {
+    background: #ff0099;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #000000, 0 0 20px #ff00cc;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    .owner-section {
+        padding: 15px 10px;
+    }
+
+    .owner-section h2 {
+        font-size: 2rem;
+    }
+
+    .owner-table th, .owner-table td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Footer Styling */
 footer.owner-footer {
     text-align: center;
     margin: 50px 0 20px;
@@ -69,4 +98,5 @@ footer.owner-footer {
 
 footer.owner-footer p {
     margin: 5px 0;
+    text-shadow: 0 0 5px #000000;
 }
