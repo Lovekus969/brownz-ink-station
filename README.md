@@ -4,23 +4,19 @@ This is the website for Tattoo Artist which will display there work . Lets start
 
 Brownz Ink Station — Booking System & Owner Access Plan
 
-Booking Page Design
+## Booking System
 
-Objective: Create a dynamic, user-friendly booking page to collect client info and schedule appointments.
+Brownz Ink Station now features a **dynamic booking page** where clients can:
+- Submit their **name, email, phone, preferred date/time**, and tattoo notes
+- Select an available **tattoo artist** (optional)
+- Receive a **confirmation message** after submission
 
-Fields to collect from user:=>
-            Full Name – text input
-            Email – email input
-            Phone Number – tel input
-            Preferred Date & Time – date & time picker
-            Tattoo Artist (Optional) – dropdown with available artists
-            Tattoo Style/Notes (Optional) – textarea
+### Owner Manual Access
+- Hidden **owner manual page** for managing bookings
+- Accessible with keyboard shortcut: **Alt + Ctrl + O**
+- Contains booking overview, contact info, and operational notes
 
-Frontend Features : =>
-            Responsive design (mobile + desktop)
-            Smooth hover and focus animations on inputs
-            Validation for email and phone format
-            Submit button triggers confirmation popup
-Backend/Processing  : => 
-          For now, can use form submission to email or store in JSON/Firebase
-          Future: integrate database + real-time appointment availability
+### Future Improvements
+- Integrate with a **backend database** for real-time availability
+- Add **automated email confirmations**
+- Expand owner page with analytics and booking management
